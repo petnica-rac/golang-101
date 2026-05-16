@@ -3,13 +3,13 @@
 Implement the following string manipulation functions and test each of them separately with a simple main function:
 
 ```golang
-// clean takes a string and returns a sanitised version of it with leading and
-// trailing whitespace removed and all characters lowercased, along with a bool
-// indicating whether the string was actually changed.
+// capitaliseWords takes a string and returns a version where the first letter
+// of every word is uppercased, along with the number of words that were
+// processed.
 //
-// Example: clean("  Hello  ") → ("hello", true)
-//          clean("hello")     → ("hello", false)
-func clean(s string) (string, bool)
+// Example: capitaliseWords("the quick fox") → ("The Quick Fox", 3)
+//          capitaliseWords("hello")         → ("Hello", 1)
+func capitaliseWords(s string) (string, int)
 
 // isPalindrome takes a string and returns true if it reads the same forwards
 // and backwards, false otherwise. Assumes the input is already clean (no
@@ -53,11 +53,11 @@ func replaceVowels(s string, replacement string) (string, int)
 //          truncate("hi", 5)          → ("hi", false)
 func truncate(s string, max int) (string, bool)
 
-// capitaliseWords takes a string and returns a version where the first letter
-// of every word is uppercased, along with the number of words that were
-// processed.
+// clean takes a string and returns a sanitised version of it with leading and
+// trailing whitespace removed and all characters lowercased, along with a bool
+// indicating whether the string was actually changed.
 //
-// Example: capitaliseWords("the quick fox") → ("The Quick Fox", 3)
-//          capitaliseWords("hello")         → ("Hello", 1)
-func capitaliseWords(s string) (string, int)
+// Example: clean("  Hello  ") → ("hello", true)
+//          clean("hello")     → ("hello", false)
+func clean(s string) (string, bool)
 ```
